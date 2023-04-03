@@ -1,0 +1,69 @@
+@font-face {
+  font-family: "Sweet Sans Regular";
+  src: url(/fonts/SweetSansProRegular.otf);
+}
+@font-face {
+  font-family: "Sweet Sans Medium";
+  src: url(/fonts/SweetSansProMedium.otf);
+}
+@font-face {
+  font-family: "Sweet Sans Bold";
+  src: url(/fonts/SweetSansProBold.otf);
+}
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Sweet Sans Regular", sans-serif;
+  background-color: #f4eeed;
+  color: black;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+.hem_home-navbar {
+  margin-top: 5%;
+}
+.hem_home-navbar {
+  width: 100%;
+  height: 10%;
+}
+.nav_container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20%;
+}
+.nav-left,
+.nav-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  gap: 15px;
+  border-radius: 3%;
+}
+.mobile-navbar {
+  width: 30px;
+  height: auto;
+  object-fit: fill;
+}
+.nav-right-el2 {
+  background-color: #ebfe00;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.hem_nav-link {
+  font-size: 10px;
+  font-family: "Sweet Sans Medium", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  color: black;
+}
