@@ -139,3 +139,42 @@ p {
   font-family: "Sweet Sans Medium";
   text-align: center;
 }
+.hem_carrousel {
+  width: 100%;
+}
+.carrousel_container {
+  height: 350px;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5%;
+}
+.image_container {
+  width: 100%;
+  flex: 0 0 25%;
+  border-radius: 10px;
+}
+.image-1 {
+  background-image: url("/media/vietnamese-woman-g2c411ca79_640.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.image-2 {
+  background-image: url("/media/woman-g54fe81bb3_640.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.image-3 {
+  background-image: url("/media/woman-g9e72363bb_640.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.image-4 {
+  background-image: url("/media/woman-gf7d65e074_640.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media only screen and (max-width: 1020px) {
+  .image_container {
+    flex: 0 0 50%;
+  }
+}
