@@ -10,6 +10,7 @@
   font-family: "Sweet Sans Bold";
   src: url(/fonts/SweetSansProBold.otf);
 }
+@import url(https://fonts.googleapis.com/css2?family=Spectral&display=swap);
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -20,15 +21,31 @@ body {
   margin-right: auto;
   font-family: "Sweet Sans Regular", sans-serif;
   background-color: #f4eeed;
-  color: black;
+  color: #1f1e2c;
+  font-weight: 400;
+  text-align: center;
 }
 *,
 *::before,
 *::after {
   box-sizing: inherit;
 }
+.hem_button {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 7px 20px 12px;
+  border-radius: 4px;
+  background-color: #1f1e2c;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 .hem_home-navbar {
-  margin-top: 5%;
+  margin-top: 3%;
 }
 .hem_home-navbar {
   width: 100%;
@@ -66,4 +83,59 @@ body {
   text-transform: uppercase;
   padding: 5px 10px;
   color: black;
+}
+.w-container::before,
+.w-container::after {
+  content: " ";
+  display: table;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-column-end: 2;
+  grid-row-end: 2;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+.hem_hero-h1-copy {
+  font-family: "Spectral", sans-serif;
+  max-width: 16ch;
+  margin: 32px auto 16px;
+  font-size: 80px;
+  line-height: 1em;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: -0.03em;
+}
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+.hem_heading {
+  margin-top: 0px;
+  margin-bottom: 0.5em;
+  font-family: "Spectral", sans-serif;
+  font-size: 28px;
+  line-height: 1em;
+  font-weight: 300;
+  text-align: center;
+}
+.hem_spacer_small {
+  height: 31px;
+}
+.hem_spacer {
+  height: 80px;
+}
+.hem_button,
+.hem_highlight {
+  background-color: #ebfe00;
+  color: #1f1e2c;
+  font-family: "Sweet Sans Medium";
+  text-align: center;
 }
