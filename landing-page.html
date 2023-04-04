@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hemster Landing Page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/css/landing-page.css" />
   </head>
 
@@ -33,28 +37,42 @@
       </div>
     </nav>
 
-    <header class="hem_home-hero">
-      <div class="hero_container">
-        <div class="hem_logo"></div>
+    <header class="hero wf-section">
+      <div class="flex-container w-container">
+        <img
+          class="hem_logo"
+          width="146"
+          src="/media/logo no icon.svg"
+          alt="hemster-icon"
+        />
         <div>
-          <h1>Introducing Revive</h1>
-          <p>
-            Our new service is using tech to solve the fashion industry's hidden
-            waste problem.
-          </p>
-          <button>LEARN MORE</button>
+          <h1 class="hem_hero-h1-copy">Introducing <em>Revive</em></h1>
+          <div class="hem_heading">
+            <p>
+              Our new service is using tech to solve the fashion industry's
+              hidden waste problem.
+            </p>
+          </div>
+          <div class="hem_spacer_small">
+            <div class="hem_spacer"></div>
+          </div>
+          <a href="#" class="hem_button hem_highlight w-button">Learn more</a>
         </div>
       </div>
     </header>
+    <div class="hem_spacer"></div>
 
     <main>
-      <div class="carrousel">
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
+      <div class="hem_carrousel">
+        <div class="carrousel_container">
+          <div class="image_container image-1"></div>
+          <div class="image_container image-2"></div>
+          <div class="image_container image-3"></div>
+          <div class="image_container image-4"></div>
+        </div>
       </div>
     </main>
+    <div class="hem_spacer"></div>
 
     <section class="hem_home-howitworks">
       <h2>Reimagine your wardrobe.</h2>
