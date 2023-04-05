@@ -173,6 +173,63 @@ p {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.hem_home-howitworks {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.hem_container {
+  height: auto;
+  max-width: 1680px;
+  text-align: center;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 24px;
+}
+.hem_heading_large {
+  max-width: 17ch;
+  letter-spacing: -0.03em;
+  margin: 0 auto 0.5em;
+  font-family: "Spectral", sans-serif;
+  font-size: 56px;
+  font-weight: 300;
+  line-height: 1em;
+}
+.hem_home-three-col {
+  max-width: 1200px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+.hem_home-col {
+  flex: 1;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+.hem_howitworks-image {
+  margin-bottom: 24px;
+}
+.hem_text-center {
+  margin-bottom: 1em;
+  font-family: "Spectral" sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+.hem_text-center.hem_width-24ch {
+  max-width: 24ch;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hem_button.outline {
+  color: #1f1e2c;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #1f1e2c;
+}
 @media only screen and (max-width: 1020px) {
   .image_container {
     flex: 0 0 50%;
