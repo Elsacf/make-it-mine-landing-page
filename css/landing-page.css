@@ -173,6 +173,7 @@ p {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.hem_wrapper,
 .hem_home-howitworks {
   padding-left: 5%;
   padding-right: 5%;
@@ -230,8 +231,58 @@ p {
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid #1f1e2c;
 }
-@media only screen and (max-width: 1020px) {
+.hem_home-brands {
+  border-bottom: 1px solid #e8ddd9;
+  padding-bottom: 40px;
+}
+.hem_brand-carrousel {
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 72px;
+  margin-bottom: 32px;
+  display: flex;
+  overflow: hidden;
+}
+.hem_home-brands-wrapper {
+  animation: moveX 20s linear 0s infinite;
+  flex: none;
+}
+.hem_home-brands-list {
+  align-items: center;
+  display: flex;
+}
+.hem_home-brands-item {
+  flex: none;
+}
+.w-inline-block {
+  max-width: 100%;
+  display: inline-block;
+}
+.link-block {
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+}
+a {
+  color: #1f1e2c;
+  font-weight: 600;
+  text-decoration: underline;
+  background-color: rgba(0, 0, 0, 0);
+}
+@keyframes moveX {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@media only screen and (max-width: 991px) {
   .image_container {
     flex: 0 0 50%;
+  }
+  .hem_wrapper {
+    margin-left: 5%;
+    margin-right: 5%;
   }
 }
