@@ -28,7 +28,7 @@ body {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 .hem_button {
   display: inline-block;
@@ -97,6 +97,11 @@ img {
   max-width: 100%;
   vertical-align: middle;
   display: inline-block;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+video {
+  object-fit: contain;
   overflow-clip-margin: content-box;
   overflow: clip;
 }
@@ -181,11 +186,11 @@ p {
 .hem_container {
   height: auto;
   max-width: 1680px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 5px 5px 5%;
   text-align: center;
   object-fit: contain;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 24px;
 }
 .hem_heading_large {
   max-width: 17ch;
@@ -226,10 +231,28 @@ p {
   margin-left: auto;
   margin-right: auto;
 }
+.hem_button {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 7px 20px 12px;
+  border-radius: 4px;
+  background-color: #1f1e2c;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 .hem_button.outline {
   color: #1f1e2c;
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid #1f1e2c;
+}
+.hem_button.outline.invert {
+  border-color: #fff;
+  color: #fff;
 }
 .hem_home-brands {
   border-bottom: 1px solid #e8ddd9;
@@ -269,6 +292,142 @@ a {
   text-decoration: underline;
   background-color: rgba(0, 0, 0, 0);
 }
+.hem_panels {
+  position: relative;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-clip: border-box;
+}
+.hem_panels-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.hem_panel {
+  position: relative;
+  max-width: 49%;
+  margin-bottom: 15px;
+  flex: 1;
+  color: #fff;
+  object-fit: fill;
+}
+.w-background-video {
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+  color: #fff;
+}
+.hem_panel-video {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+.hem_panel_container {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding-bottom: 100%;
+  border-radius: 16px;
+  object-fit: contain;
+}
+.hem_panel_container.hem_panel-video.quickfix {
+  position: relative;
+  padding-bottom: 50%;
+}
+.w-background-video > video {
+  background-size: cover;
+  background-position: 50% 50%;
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  right: -100%;
+  bottom: -100%;
+  top: -100%;
+  left: -100%;
+  object-fit: cover;
+  z-index: -100;
+}
+.hem_panel-video.rounded {
+  border-radius: 16px;
+}
+.hem_panel-video.rounded.quickfix {
+  position: absolute;
+  padding-bottom: 0px;
+}
+.hem_panel-content {
+  position: absolute;
+  left: 0%;
+  top: 5%;
+  right: 0%;
+  bottom: 5%;
+  display: flex;
+  padding-bottom: 0px;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+.hem_panel-text {
+  display: flex;
+  padding-right: 5%;
+  padding-left: 5%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.hem_heading-medium {
+  margin-top: 0px;
+  margin-bottom: 0.5em;
+  margin-left: 0px;
+  font-family: "Spectral", sans-serif;
+  font-size: 40px;
+  line-height: 1.2em;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+.hem_heading-medium-_-center {
+  margin-top: 0px;
+  margin-bottom: 0.5em;
+  font-family: "Spectral", sans-serif;
+  font-size: 40px;
+  line-height: 1.2em;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+.hem_heading-medium.hemwidth-16ch {
+  max-width: 16ch;
+  text-align: center;
+}
+.hem_heading-medium-_-center.hem_width-16ch {
+  max-width: 16ch;
+  text-align: center;
+}
+.hem_text {
+  margin-bottom: 1em;
+  font-family: "Spectral", sans-serif;
+  font-size: 18px;
+  line-height: 1.5em;
+  font-weight: 300;
+}
+.hem_text.hem_width-32ch {
+  max-width: 32ch;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+.hem_panel-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 auto;
+}
+
 @keyframes moveX {
   0% {
     transform: translateX(0%);
@@ -284,5 +443,12 @@ a {
   .hem_wrapper {
     margin-left: 5%;
     margin-right: 5%;
+  }
+  .hem_panels-wrapper {
+    flex-direction: column;
+  }
+  .hem_panel {
+    max-width: none;
+    margin-bottom: 16px;
   }
 }
