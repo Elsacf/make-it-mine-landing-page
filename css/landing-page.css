@@ -28,7 +28,7 @@ body {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 .hem_button {
   display: inline-block;
@@ -97,6 +97,11 @@ img {
   max-width: 100%;
   vertical-align: middle;
   display: inline-block;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+video {
+  object-fit: contain;
   overflow-clip-margin: content-box;
   overflow: clip;
 }
@@ -305,6 +310,12 @@ a {
   color: #fff;
   object-fit: fill;
 }
+.w-background-video {
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+  color: #fff;
+}
 .hem_panel-video {
   position: absolute;
   left: 0%;
@@ -327,8 +338,26 @@ a {
   position: relative;
   padding-bottom: 50%;
 }
+.w-background-video > video {
+  background-size: cover;
+  background-position: 50% 50%;
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  right: -100%;
+  bottom: -100%;
+  top: -100%;
+  left: -100%;
+  object-fit: cover;
+  z-index: -100;
+}
 .hem_panel-video.rounded {
   border-radius: 16px;
+}
+.hem_panel-video.rounded.quickfix {
+  position: absolute;
+  padding-bottom: 0px;
 }
 .hem_panel-content {
   position: absolute;
@@ -351,6 +380,17 @@ a {
   align-items: center;
   flex: 1;
 }
+.hem_heading-medium {
+  margin-top: 0px;
+  margin-bottom: 0.5em;
+  margin-left: 0px;
+  font-family: "Spectral", sans-serif;
+  font-size: 40px;
+  line-height: 1.2em;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
 .hem_heading-medium-_-center {
   margin-top: 0px;
   margin-bottom: 0.5em;
@@ -360,8 +400,12 @@ a {
   font-weight: 300;
   letter-spacing: -0.02em;
 }
-.hem_heading-medium-_-center.hem_width-24ch {
-  max-width: 24ch;
+.hem_heading-medium.hemwidth-16ch {
+  max-width: 16ch;
+  text-align: center;
+}
+.hem_heading-medium-_-center.hem_width-16ch {
+  max-width: 16ch;
   text-align: center;
 }
 .hem_text {
