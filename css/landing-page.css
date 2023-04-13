@@ -427,7 +427,19 @@ a {
   align-items: center;
   flex: 0 auto;
 }
-
+.hem_home-press {
+  padding-right: 5%;
+  padding-right: 5%;
+}
+.hem_press-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hem_press-item {
+  padding-right: 2.5vw;
+  padding-left: 2.5vw;
+}
 @keyframes moveX {
   0% {
     transform: translateX(0%);
@@ -450,5 +462,12 @@ a {
   .hem_panel {
     max-width: none;
     margin-bottom: 16px;
+  }
+  .hem_press-list {
+    flex-wrap: wrap;
+  }
+  .hem_press-item {
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 }
